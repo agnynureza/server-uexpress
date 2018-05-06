@@ -2,10 +2,10 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const apiSchema = new Schema({
-  tipe: String,
+  type: String,
   image: String,
-  Weight: Number,
-  order: String  
+  weight: String,
+  order: Number 
 })
 
 module.exports = mongoose.model('Api', apiSchema)

@@ -12,7 +12,7 @@ const upload = multer({
  })
 
 router.get('/',readVehicle)
-router.post('/',upload.single(image),sendUploadToGCS,addVehicle)
+router.post('/',upload.single('image'),sendUploadToGCS,addVehicle)
 router.put('/:id',updateVehicle)
 router.delete('/:id',deleteVehicle)
 

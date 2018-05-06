@@ -11,6 +11,12 @@ const api = require('./routes/api')
 
 var app = express();
 
+const mongoose = require('mongoose')
+mongoose.connect('mongodb://agnynureza:12345@ds115219.mlab.com:15219/apatudb', err => {
+  if(!err) console.log('connected to database !')
+  else throw new error(err)
+})
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
